@@ -1,0 +1,13 @@
+
+artifacts/
+build/
+cache/
+flattened/
+node_modules/
+
+.env
+.idea
+.vscode
+
+*.tmp
+.old

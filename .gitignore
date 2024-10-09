@@ -1,0 +1,27 @@
+# Compiler files
+cache/
+coverage/
+out/
+
+# Ignores broadcast logs
+!broadcast
+broadcast/*
+
+# Ignores local deployments
+deployments/localhost/*
+
+.DS_Store
+node_modules
+
+# VS Code history
+.history
+
+# Secrets
+.envrc
+.env
+
+# Generated Docs
+reference-out/
+
+# Address Book
+config/addressBook.txt
