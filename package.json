@@ -1,14 +1,14 @@
 {
-  "name": "@generationsoftware/pt-v5-mainnet",
+  "name": "@bitprize/v5-mainnet",
   "version": "1.0.0",
-  "description": "PoolTogether V5 Mainnet Deployment Scripts",
+  "description": "BitPrize Mainnet Deployment Scripts",
   "author": {
-    "name": "G9 Software Inc.",
+    "name": "BitPrize",
     "url": "https://github.com/GenerationSoftware"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GenerationSoftware/pt-v5-mainnet.git"
+    "url": "git+https://github.com/creeping-vampires/bitprize-contracts.git"
   },
   "scripts": {
     "clean": "forge clean",
