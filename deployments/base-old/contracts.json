@@ -5,11 +5,338 @@
     "minor": 0,
     "patch": 0
   },
-  "timestamp": "2024-11-07T13:15:57.789Z",
+  "timestamp": "2024-10-19T13:32:36.089Z",
   "contracts": [
     {
-      "chainId": 1116,
-      "address": "0x6a671c92762561d8df0c2ed1ee0570fc0e3c0188",
+      "chainId": 8453,
+      "address": "0x683e8297de4277e27870eefe03a90d479b29cbcb",
+      "version": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+      },
+      "type": "RngWitnet",
+      "abi": [
+        {
+          "type": "constructor",
+          "inputs": [
+            {
+              "name": "_witnetRandomness",
+              "type": "address",
+              "internalType": "contract IWitnetRandomness"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "estimateRandomizeFee",
+          "inputs": [
+            {
+              "name": "_gasPrice",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getLastRequestId",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getRequestor",
+          "inputs": [
+            {
+              "name": "user",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "contract Requestor"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "isRequestComplete",
+          "inputs": [
+            {
+              "name": "_requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isRequestFailed",
+          "inputs": [
+            {
+              "name": "_requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "lastRequestId",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "randomNumber",
+          "inputs": [
+            {
+              "name": "_requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "requestRandomNumber",
+          "inputs": [
+            {
+              "name": "rngPaymentAmount",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            },
+            {
+              "name": "lockBlock",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "cost",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "requestedAtBlock",
+          "inputs": [
+            {
+              "name": "_requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "requestors",
+          "inputs": [
+            {
+              "name": "user",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "contract Requestor"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "requests",
+          "inputs": [
+            {
+              "name": "requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "lockBlock",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "startDraw",
+          "inputs": [
+            {
+              "name": "rngPaymentAmount",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "_drawManager",
+              "type": "address",
+              "internalType": "contract DrawManager"
+            },
+            {
+              "name": "_rewardRecipient",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint24",
+              "internalType": "uint24"
+            }
+          ],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "withdraw",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "witnetRandomness",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "contract IWitnetRandomness"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "event",
+          "name": "RandomNumberRequested",
+          "inputs": [
+            {
+              "name": "requestId",
+              "type": "uint32",
+              "indexed": true,
+              "internalType": "uint32"
+            },
+            {
+              "name": "sender",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "paid",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "cost",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "error",
+          "name": "UnknownRequest",
+          "inputs": [
+            {
+              "name": "requestId",
+              "type": "uint32",
+              "internalType": "uint32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chainId": 8453,
+      "address": "0xcca8f122e30b9f21f0ddca326496cf9646761297",
       "version": {
         "major": 1,
         "minor": 0,
@@ -1177,8 +1504,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x726530947d9f141d39fdb274ceebf28b55f6807a",
+      "chainId": 8453,
+      "address": "0x680a20a0e7ece95d053ff1f4b2e923b7aa2350d1",
       "version": {
         "major": 1,
         "minor": 0,
@@ -1864,8 +2191,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0xd594b2e664fa78ac60b8d56f3095220f1ccd2355",
+      "chainId": 8453,
+      "address": "0x532dc8c839025e210547e1f303ae2710ca847871",
       "version": {
         "major": 1,
         "minor": 0,
@@ -2020,8 +2347,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0xf5869df3fbb9b5f1eafe61cdf6befac84f7b1d03",
+      "chainId": 8453,
+      "address": "0x0ba68daebaefdc5325dda2b1f1f8b811585b55e1",
       "version": {
         "major": 1,
         "minor": 0,
@@ -2210,8 +2537,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x230dbf0848a05c13ee8f66068e45a1298d10823e",
+      "chainId": 8453,
+      "address": "0xfb31d99977ea23c44fa959679288ff16acc0eb4e",
       "version": {
         "major": 1,
         "minor": 0,
@@ -2388,8 +2715,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x39ae8c3bcb45dc0a3d533aea44873ccf3aef6515",
+      "chainId": 8453,
+      "address": "0xdd2183623973093f149000be20224056d68add5a",
       "version": {
         "major": 1,
         "minor": 0,
@@ -4563,8 +4890,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x562760c46a4a1d3fbb67199ae43848b90a81f35c",
+      "chainId": 8453,
+      "address": "0x3990ee369fb517906362f3c69fa78dc78672a146",
       "version": {
         "major": 1,
         "minor": 0,
@@ -4686,8 +5013,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x59303f92bc1fe04bef68937e5a309d766b5d4d04",
+      "chainId": 8453,
+      "address": "0xd500d53ea76dd3846646e31518893e214af1e50e",
       "version": {
         "major": 1,
         "minor": 0,
@@ -5073,8 +5400,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0xbd4b78b3968922e8a53f1d845eb3a128adc2aa12",
+      "chainId": 8453,
+      "address": "0xb4d069e20eaea762fd25915e7ab4ebe21a0cf313",
       "version": {
         "major": 1,
         "minor": 0,
@@ -5926,8 +6253,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x34192620ff3ded7121ab77b29cd11dee624dac6f",
+      "chainId": 8453,
+      "address": "0x950c6fb92d9d482c85d11ddc508e95869a88138b",
       "version": {
         "major": 1,
         "minor": 0,
@@ -6523,8 +6850,8 @@
       ]
     },
     {
-      "chainId": 1116,
-      "address": "0x71fde5c8e06f17ac8b9a77a184a3f3e7184fb4a0",
+      "chainId": 8453,
+      "address": "0x8887c67692ff800d294ac3247bb9681df2dfc59b",
       "version": {
         "major": 1,
         "minor": 0,

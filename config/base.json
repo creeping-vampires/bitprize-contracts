@@ -1,8 +1,8 @@
 {
   "prize_pool": {
     "tier_liquidity_utilization_rate": "500000000000000000",
-    "draw_period_seconds": "86400",
-    "first_draw_starts_at": "1728296925361",
+    "draw_period_seconds": "10800",
+    "first_draw_starts_at": "1730984484350",
     "grand_prize_period_draws": "91",
     "number_of_tiers": "5",
     "tier_shares": "100",
@@ -38,7 +38,7 @@
   },
 
   "claimer": {
-    "time_to_reach_max_fee": "21600",
+    "time_to_reach_max_fee": "600",
     "max_fee_percent": "100000000000000000"
   }
 }
